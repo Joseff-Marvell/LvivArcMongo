@@ -18,7 +18,8 @@ with col1:
     objCol = collections["Obj"]
     arcStyle = collections["Style"]
 
-    type_documents = typeCol.find({"norm": "1"}).sort("typeName", 1)
+    # type_documents = typeCol.find({"norm": "1"}).sort("typeName", 1)
+    type_documents = typeCol.find({}).sort("typeName", 1)
     type_doc_list = list(type_documents)
     df = pd.DataFrame(type_doc_list)
     df_lim = df.iloc[:, 1:2]
